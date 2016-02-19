@@ -8,5 +8,9 @@ public class Definition {
     mDef = def;
   }
 
+  public String getDef() {
+    return mDef;
+  }
+
 
 }

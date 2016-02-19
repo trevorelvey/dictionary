@@ -10,4 +10,9 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("defexample");
     assertEquals(true, myDefinition instanceof Definition);
   }
+
+  public void definition_instantiatesWithDef_true() {
+    Definition myDefinition = new Definition("defexample");
+    assertEquals("defexample", myDefinition.getDef());
+  }
 }
