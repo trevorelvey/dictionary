@@ -5,11 +5,14 @@ public class Word {
 
   private String mInput;
   private int mId;
+  private String mDefinition;
+  private ArrayList<Definition> mDefinitions;
 
   public Word(String input) {
     mInput = input;
     words.add(this);
     mId = words.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getInput() {
@@ -20,8 +23,20 @@ public class Word {
     return mId;
   }
 
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+  }
+
   public static ArrayList<Word> all() {
     return words;
+  }
+
+  public static void clear() {
+    words.clear();
+  }
+
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
   }
 
   public static Word find(int id) {
@@ -30,9 +45,5 @@ public class Word {
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
-  }
-
-  public static void clear() {
-    words.clear();
   }
 }

@@ -16,12 +16,12 @@ public class Definition {
     return mDef;
   }
 
-  public static ArrayList<Definition> all() {
-    return instances;
-  }
-
   public int getId() {
     return mId;
+  }
+
+  public static ArrayList<Definition> all() {
+    return instances;
   }
 
   public static Definition find(int id) {

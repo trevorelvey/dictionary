@@ -49,4 +49,12 @@ public class WordTest {
       Word.clear();
       assertEquals(Word.all().size(), 0);
     }
+
+  @Test
+    public void addTask_addsDefinitionToWordList() {
+      Word testWord = new Word("example");
+      Definition testDefinition = new Definition("defexample");
+      testWord.addDefinition(testDefinition);
+      assertTrue(testWord.getDefinitions().contains(testDefinition));
+    }
 }
