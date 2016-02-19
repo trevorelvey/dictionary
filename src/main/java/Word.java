@@ -23,4 +23,12 @@ public class Word {
   public static ArrayList<Word> all() {
     return words;
   }
+
+  public static Word find(int id) {
+    try {
+      return words.get(id-1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 }
