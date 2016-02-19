@@ -24,4 +24,29 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(firstDefinition));
     assertTrue(Definition.all().contains(secondDefinition));
   }
+
+  @Test
+  public void newId_definitionsInstantiateWithAnID_true() {
+    Definition myDefinition = new Definition("defexample");
+    assertEquals(Definition.all().size(), myDefinition.getId());
+  }
+
+  @Test
+  public void find_returnsDefinitionWithSameId_secondDefinition() {
+    Definition firstDefinition = new Definition("defexample");
+    Definition secondDefinition = new Definition("defexample2");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
+
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList() {
+    Definition myDefinition = new Definition("defexample");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 }
