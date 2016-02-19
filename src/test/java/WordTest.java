@@ -24,4 +24,10 @@ public class WordTest {
     assertTrue(Word.all().contains(firstWord));
     assertTrue(Word.all().contains(secondWord));
   }
+
+  @Test
+  public void newId_wordInstantiatesWithAnID_true() {
+    Word myWord = new Word ("example");
+    assertEquals(Word.all().size(), myWord.getId());
+  }
 }

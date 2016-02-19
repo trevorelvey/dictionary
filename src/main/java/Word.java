@@ -16,6 +16,10 @@ public class Word {
     return mInput;
   }
 
+  public int getId() {
+    return mId;
+  }
+
   public static ArrayList<Word> all() {
     return words;
   }
