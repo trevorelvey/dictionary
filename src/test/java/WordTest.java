@@ -42,4 +42,11 @@ public class WordTest {
   public void find_returnsNullWhenNoWordFound_null() {
     assertTrue(Word.find(999) == null);
   }
+
+  @Test
+    public void clear_emptiesAllWordFromArrayList() {
+      Word myWord = new Word("example");
+      Word.clear();
+      assertEquals(Word.all().size(), 0);
+    }
 }
