@@ -35,4 +35,15 @@ public class AppIntegrationTest extends FluentTest {
     assertThat(pageSource()).contains("example");
   }
 
+  // @Test
+  // public void wordDefinitionsFormIsDisplayed() {
+  //   goTo("http://localhost:4567/words/new");
+  //   fill("#inputWord").with("example");
+  //   submit(".btn");
+  //   click("a", withText("View categories"));
+  //   click("a", withText("Shopping"));
+  //   click("a", withText("Add a new task"));
+  //   assertThat(pageSource()).contains("Add a Task to Shopping");
+  // }
+
 }
