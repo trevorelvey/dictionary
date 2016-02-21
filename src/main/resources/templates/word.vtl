@@ -1,8 +1,9 @@
-<h3>Definitions for this word:</h3>
 word.vtl
+<h3>Definitions for this word:</h3>
+
 #foreach($definition in $word.getInput())
  <h3>$definition.getDef()</a></h3>
 #end
 
-<a class="btn btn-default" href="/words/$word.getId()/definitions/new">Add a new definition</a>
+<a class="btn btn-default" href="/words/$word.getId()/definitions/new">Add A New Definition</a>
 <a class="btn btn-default" href="/">Return to Main Page</a>
