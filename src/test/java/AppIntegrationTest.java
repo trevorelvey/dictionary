@@ -44,17 +44,4 @@ public class AppIntegrationTest extends FluentTest {
     click("a", withText("Add A New Definition"));
     assertThat(pageSource()).contains("Definition");
   }
-
-  // @Test
-  // public void definitionIsAddedAndDisplayed() {
-  //   goTo("http://localhost:4567/words/new");
-  //   fill("#term").with("example");
-  //   submit(".btn");
-  //   click("a", withText("example"));
-  //   click("a", withText("Add a New Definition"));
-  //   fill("#def").with("defexample");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("defexample");
-  // }
-
 }
